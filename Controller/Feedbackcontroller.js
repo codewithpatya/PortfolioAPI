@@ -3,7 +3,7 @@ const Feedback = require("../Model/Feedback")
 // get
 exports.getFeedback = async (req,res)=>{
     try {
-        const data = await Feedback.find()
+        const data = await Feedback.find().limit(3).sort({$natural:-1});
         return res.json({errors:false,data:data}) 
     } catch (error) {
         return res.status(400).json({errors:true,message:error.message})

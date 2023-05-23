@@ -6,7 +6,11 @@ const feedSchema = new mongoose.Schema({
         required:true
     },
     email:String,
-    message:String
+    message:String,
+    date: {
+        type: Date,
+        default: Date.now()
+    }
 })
 
 module.exports =  mongoose.model("Pfeedback",feedSchema)
