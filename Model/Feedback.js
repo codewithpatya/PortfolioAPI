@@ -8,8 +8,7 @@ const feedSchema = new mongoose.Schema({
     email:String,
     message:String,
     date: {
-        type: Date,
-        default: Date.now()
+        type: Date
     }
 })
 

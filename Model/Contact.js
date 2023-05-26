@@ -15,8 +15,7 @@ const contactSchema = new mongoose.Schema({
     },
     message:String,
     date: {
-        type: Date,
-        default: Date.now()
+        type: Date
     }
 })
 
